@@ -200,22 +200,7 @@
                                         213
                                     </td>
                         </tr> -->
-                        <% for (var i = 0; i < chapterList.length; i++){ %>
-                            <tr>
-                                <td>
-                                    <%= i+1 %>
-                                </td>
-                                <td>
-                                    <%= chapterList[i].title %>
-                                </td>
-                                <td>
-                                    <%= chapterList[i].views %>
-                                </td>
-                                <td>
-                                    213
-                                </td>
-                            </tr>
-                        <% } %>
+                        <%- items.map(function(item){ return '<tr><td>109'+'</td><td>'+item.title+'</td><td>'+item.views+'</td><td>'+'213</td></tr>'; }) %>
                     </table>
         </div>
     </div>

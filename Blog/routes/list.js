@@ -1,9 +1,10 @@
 var express = require('express');
+var {users,chapterList} = require('../data.json');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/list', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', function(req, res, next) {
+  res.render('list',{items:chapterList});
 });
 
 module.exports = router;

@@ -21,18 +21,7 @@ app.use(bodyParser.json());
 
 
 app.use('/', indexRouter);
-// app.use('/list', listRouter);
-
-app.post('/',function(req,res){
-  console.log(req.body.username)
-  console.log(data.users[0].username);
-  if(req.body.username === data.users[0].username && req.body.pwd === data.users[0].password){
-    console.log('yes')
-    res.render('list',{chapterList: data.chapterList})
-  }else{
-    res.send("用户名、密码输入错误")
-  }
-})
+app.use('/list', listRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));
